@@ -1,0 +1,107 @@
+<a-scene
+  xrweb
+  xrextras-loading
+  xrextras-runtime-error
+  renderer="colorManagement: true"
+>
+  <a-assets>
+    <a-asset-item id="catModel" src="./assets/cat.glb"></a-asset-item>
+  </a-assets>
+
+  <a-camera
+    position="0 0 0"
+    raycaster="objects: .link-btn"
+    cursor="rayOrigin: mouse"
+  ></a-camera>
+
+  <!-- Image Target 名で参照 -->
+  <a-entity
+    id="cardTarget"
+    named-image-target="name: business-card-v1"
+  >
+    <!-- 猫 -->
+    <a-gltf-model
+      id="cat"
+      src="#catModel"
+      position="0 0.035 0"
+      scale="0.18 0.18 0.18"
+      rotation="0 0 0"
+      shadow="cast: true"
+    ></a-gltf-model>
+
+    <!-- リンク群 -->
+    <a-entity id="linkGroup" visible="false">
+      <a-plane
+        class="link-btn"
+        data-url="https://x.com/your_account"
+        position="0 0.12 0"
+        width="0.24"
+        height="0.05"
+        color="#FFFFFF"
+        material="shader: flat"
+      >
+        <a-text
+          value="X"
+          align="center"
+          color="#111111"
+          width="0.5"
+          position="0 0 0.01"
+        ></a-text>
+      </a-plane>
+
+      <a-plane
+        class="link-btn"
+        data-url="https://note.com/your_account"
+        position="0 0.19 0"
+        width="0.24"
+        height="0.05"
+        color="#FFFFFF"
+        material="shader: flat"
+      >
+        <a-text
+          value="note"
+          align="center"
+          color="#111111"
+          width="0.7"
+          position="0 0 0.01"
+        ></a-text>
+      </a-plane>
+
+      <a-plane
+        class="link-btn"
+        data-url="https://github.com/your_account"
+        position="0 0.26 0"
+        width="0.24"
+        height="0.05"
+        color="#FFFFFF"
+        material="shader: flat"
+      >
+        <a-text
+          value="GitHub"
+          align="center"
+          color="#111111"
+          width="0.9"
+          position="0 0 0.01"
+        ></a-text>
+      </a-plane>
+
+      <a-plane
+        class="link-btn"
+        data-url="https://your-site.example"
+        position="0 0.33 0"
+        width="0.24"
+        height="0.05"
+        color="#FFFFFF"
+        material="shader: flat"
+      >
+        <a-text
+          value="AI Lab"
+          align="center"
+          color="#111111"
+          width="0.8"
+          position="0 0 0.01"
+        ></a-text>
+      </a-plane>
+    </a-entity>
+  </a-entity>
+</a-scene>
