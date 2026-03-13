@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>AR test</title>
-
-<script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
-
+  <meta charset="utf-8">
+  <title>Cat Test</title>
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
 </head>
-
 <body>
+  <a-scene>
+    <a-assets>
+      <a-asset-item id="catModel" src="assets/cat.glb"></a-asset-item>
+    </a-assets>
 
-<a-scene>
+    <a-gltf-model
+      src="#catModel"
+      position="0 0 -3"
+      scale="0.3 0.3 0.3">
+    </a-gltf-model>
 
-<a-box position="0 1 -3" color="red"></a-box>
-
-<a-camera></a-camera>
-
-</a-scene>
-
+    <a-camera></a-camera>
+  </a-scene>
 </body>
 </html>
