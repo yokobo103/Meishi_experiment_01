@@ -1,107 +1,22 @@
-<a-scene
-  xrweb
-  xrextras-loading
-  xrextras-runtime-error
-  renderer="colorManagement: true"
->
-  <a-assets>
-    <a-asset-item id="catModel" src="./assets/cat2.glb"></a-asset-item>
-  </a-assets>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AR test</title>
 
-  <a-camera
-    position="0 0 0"
-    raycaster="objects: .link-btn"
-    cursor="rayOrigin: mouse"
-  ></a-camera>
+<script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
 
-  <!-- Image Target 名で参照 -->
-  <a-entity
-    id="cardTarget"
-    named-image-target="name: business-card-v1"
-  >
-    <!-- 猫 -->
-    <a-gltf-model
-      id="cat"
-      src="#catModel"
-      position="0 0.035 0"
-      scale="0.18 0.18 0.18"
-      rotation="0 0 0"
-      shadow="cast: true"
-    ></a-gltf-model>
+</head>
 
-    <!-- リンク群 -->
-    <a-entity id="linkGroup" visible="false">
-      <a-plane
-        class="link-btn"
-        data-url="https://x.com/yokobo_ai?s=21"
-        position="0 0.12 0"
-        width="0.24"
-        height="0.05"
-        color="#FFFFFF"
-        material="shader: flat"
-      >
-        <a-text
-          value="X"
-          align="center"
-          color="#111111"
-          width="0.5"
-          position="0 0 0.01"
-        ></a-text>
-      </a-plane>
+<body>
 
-      <a-plane
-        class="link-btn"
-        data-url="https://note.com/ykv_yocovooo"
-        position="0 0.19 0"
-        width="0.24"
-        height="0.05"
-        color="#FFFFFF"
-        material="shader: flat"
-      >
-        <a-text
-          value="note"
-          align="center"
-          color="#111111"
-          width="0.7"
-          position="0 0 0.01"
-        ></a-text>
-      </a-plane>
+<a-scene>
 
-      <a-plane
-        class="link-btn"
-        data-url="https://github.com/yokobo103"
-        position="0 0.26 0"
-        width="0.24"
-        height="0.05"
-        color="#FFFFFF"
-        material="shader: flat"
-      >
-        <a-text
-          value="GitHub"
-          align="center"
-          color="#111111"
-          width="0.9"
-          position="0 0 0.01"
-        ></a-text>
-      </a-plane>
+<a-box position="0 1 -3" color="red"></a-box>
 
-      <a-plane
-        class="link-btn"
-        data-url="https://yokobo103.github.io/AI-Lab-Site/"
-        position="0 0.33 0"
-        width="0.24"
-        height="0.05"
-        color="#FFFFFF"
-        material="shader: flat"
-      >
-        <a-text
-          value="AI Lab"
-          align="center"
-          color="#111111"
-          width="0.8"
-          position="0 0 0.01"
-        ></a-text>
-      </a-plane>
-    </a-entity>
-  </a-entity>
+<a-camera></a-camera>
+
 </a-scene>
+
+</body>
+</html>
