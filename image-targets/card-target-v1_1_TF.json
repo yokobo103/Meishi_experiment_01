@@ -1,0 +1,23 @@
+{
+  "imagePath": "image-targets/card-target-v1_1_TF_luminance.png",
+  "metadata": null,
+  "name": "card-target-v1_1_TF",
+  "type": "PLANAR",
+  "properties": {
+    "left": 0,
+    "top": 112,
+    "width": 648,
+    "height": 864,
+    "isRotated": true,
+    "originalWidth": 648,
+    "originalHeight": 1088
+  },
+  "resources": {
+    "originalImage": "card-target-v1_1_TF_original.png",
+    "croppedImage": "card-target-v1_1_TF_cropped.png",
+    "thumbnailImage": "card-target-v1_1_TF_thumbnail.png",
+    "luminanceImage": "card-target-v1_1_TF_luminance.png"
+  },
+  "created": 1773496391769,
+  "updated": 1773496391769
+}
